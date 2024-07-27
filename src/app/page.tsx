@@ -15,7 +15,7 @@ export default function Home() {
         spli<span className="text-purple-400">X</span>tech
       </h1>
       <p className="font-mono text-2xl  z-10 text-center mt-8">
-        Akshar Patel presents iDevNow Tech, transforming the digital landscape with cutting-edge web development, AI, ML, advanced software solutions, <span className="text-green-400">exceptional UI/UX design, and 3D product design, </span>in partnership with Redmagic Studio.
+        Akshar Patel presents ,splixtech transforming the digital landscape with cutting-edge web development, AI, ML, advanced software solutions, <span className="text-green-400">exceptional UI/UX design, and 3D product design, </span>in partnership with Redmagic Studio.
       </p>
     </main>
   );
