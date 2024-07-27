@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: array; /* Name of your custom font */
+    font-weight: 400; /* Font weight (normal) */
+    src: url(../../public/fonts/Array_Complete/Array-Regular.woff)
+      format('woff'); /* Font source and format */
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: nodeCamera; /* Name of your custom font */
+    font-weight: 400; /* Font weight (normal) */
+    src: url(../../public/fonts/nodeCamera/nodeCameramidum.woff2)
+      format('woff'); /* Font source and format */
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: telegraphic; /* Name of your custom font */
+    font-weight: 400; /* Font weight (normal) */
+    src: url(../../public/fonts/telegraphic/TrueType/SFTelegraphic.ttf)
+      format('woff'); /* Font source and format */
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: ledcounter7; /* Name of your custom font */
+    font-weight: 400; /* Font weight (normal) */
+    src: url(../../public/fonts/led-counter-7/led_counter-7.ttf)
+      format('woff'); /* Font source and format */
+  }
+}
