@@ -7,6 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "splixtech",
   description: "splixtech",
+ 
+  
 };
 
 export default function RootLayout({
@@ -16,7 +18,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head><link rel="icon" href="/SpliXtech-Logo.svg" sizes="any" /></head>
       <body className={inter.className}>{children}</body>
     </html>
   );
