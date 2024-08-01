@@ -20,7 +20,15 @@ const config: Config = {
         nodeCamera: ["nodeCamera","sans-serif"],
         telegraphic: ["telegraphic","sans-serif"],
         ledcounter7: ["ledcounter7","sans-serif"],
+        neopixelregular: ["neopixelregular","sans-serif"],
 
+    },
+    colors: {
+      'blue-violet': '#8a2be2',
+    },
+    clipPath: {
+      'polygon-closed': 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
+      'polygon-open': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
     },
     },
   },

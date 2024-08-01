@@ -68,3 +68,43 @@ body {
       format('woff'); /* Font source and format */
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: neopixelregular; /* Name of your custom font */
+    font-weight: 400; /* Font weight (normal) */
+    src: url(../../public/fonts/neopixel-fontLEMATED/neopixel-regular.otf)
+      format('woff'); /* Font source and format */
+  }
+}
+
+
+.menu-overlay {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.clip-path-polygon-closed {
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+@media (max-width: 900px) {
+  .text-4xl {
+    font-size: 1.5rem; /* Tailwind CSS equivalent */
+  }
+
+  .pt-8 {
+    padding-top: 2rem; /* Tailwind CSS equivalent */
+  }
+}
+
+.glass-background {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  /* border: 0.5px solid rgba(255, 255, 255, 0.2); Optional border for better visual effect */
+}
+
+.glass-background-blue-violet {
+  background: rgba(138, 43, 226, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  /* border: 0.5px solid rgba(255, 255, 255, 0.2); Optional border for better visual effect */
+}

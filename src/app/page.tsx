@@ -1,4 +1,5 @@
 "use client";
+import Menu from "@/components/Navigationbar/menu";
 import Image from "next/image";
 
 
@@ -8,6 +9,7 @@ export default function Home() {
   };
   return (
     <>
+    <Menu />
    <main className="relative flex min-h-screen flex-col items-center justify-center p-6 sm:p-12 md:p-24">
       <Image
         src="/Images/BG/paris-bilal-YEtLnGgmgvk-.jpg" 
