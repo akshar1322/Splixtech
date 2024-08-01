@@ -16,35 +16,16 @@ interface Update {
 const updates: Update[] = [
   {
     id: 1,
-    name: 'Beta - 11.0.A',
+    name: 'Beta - 1.0.A',
     version: 'Beta',
-    dateTime: 'Wednesday, 24 July 24 20:16 PM',
-    title: 'fixing bugs, enhancing stability, and improving performance.',
-    what: 'fixing bugs, enhancing stability, and improving performance.',
+    dateTime: 'Friday, 2 Agust 24 04:10 am',
+    title: 'Wllcome to the first beta release of the app',
+    what: '',
     why: '',
-    performance: 'Bug occurrence reduced by 90%.',
+    performance: '',
   },
-  {
-    id: 2,
-    name: 'Beta - 10.0.A',
-    version: 'Beta',
-    dateTime: 'Thursday, 20 June 24 02:30 PM',
-    title: 'UI Design Fully Improved and New Pages Added',
-    what: 'The entire user interface has been redesigned to enhance the user experience. New pages have been added to the website, including a revamped Blog system and a Hot Deals section with personalized recommendations.',
-    why: 'We aimed to significantly improve the overall performance and usability of the website. This update provides users with a more intuitive and visually appealing interface, along with valuable new features.',
-    performance: 'This version offers a 90% faster response time compared to the previous version, Stable - 09.8.A.',
-  },
-  {
-    id: 3,
-    name: 'Previous Version',
-    version: 'Stable - 09.8.A',
-    dateTime: 'Monday, 4 March 24 02:30 PM',
-    title: 'Improved User Authentication and Security',
-    what: 'This update focused on fixing bugs, enhancing stability, and improving performance.',
-    why: 'The improvements were necessary as the website occasionally failed to load on older web browsers, impacting user experience.',
-    performance: 'Bug occurrence reduced by 90%.',
-  },
-  // Add more updates as needed
+  
+     // Add more updates as needed
 ];
 
 const UpdateHub: React.FC = () => {
