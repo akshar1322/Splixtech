@@ -1,6 +1,8 @@
 'use client';
 import React ,{useEffect} from 'react';
 import Headerimage from '@/components/ui/Headerimage';
+import Footer from '@/components/Footer/footer';
+import Navigationbar from '@/components/Navigationbar/Navigationbar';
 
 interface Update {
   id: number;
@@ -24,7 +26,7 @@ const updates: Update[] = [
     why: '',
     performance: '',
   },
-  
+
      // Add more updates as needed
 ];
 
@@ -38,14 +40,15 @@ const UpdateHub: React.FC = () => {
   };
 
   return (
-    
+
     <div className="bg-black text-white">
+      <Navigationbar />
       <br />
-      <Headerimage 
+      <Headerimage
         backgroundImageUrl="https://images.unsplash.com/photo-1627637819794-fba32f82be16?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         text="Release Updates" />
      <div className="container mx-auto  p-8 min-h-screen rounded-lg">
-      
+
       {updates.map((update) => (
         <div key={update.id} className="bg-[#282828] p-6 mb-4 rounded-lg">
           <div className="flex justify-between items-center p-3">
@@ -66,6 +69,7 @@ const UpdateHub: React.FC = () => {
         </p>
       </div>
       </div>
+      <Footer />
     </div>
   );
 };

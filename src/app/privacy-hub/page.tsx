@@ -1,7 +1,9 @@
-'use client';   
+'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Headerimage from '@/components/ui/Headerimage';
+import Navigationbar from '@/components/Navigationbar/Navigationbar';
+import Footer from '@/components/Footer/footer';
 
 // Define types for the flags and updates
 interface Flag {
@@ -21,7 +23,7 @@ const flags: Flag[] = [
   { country: 'India', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/1280px-Flag_of_India.png' },
   { country: 'USA', src: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Flag_of_the_United_States.png' },
   { country: 'UK', src: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png' },
- 
+
 ];
 
 const updates: Update[] = [
@@ -59,14 +61,16 @@ const PrivacyHub: React.FC = () => {
 
   return (
     <div className="bg-black text-white ">
+
       <br />
-      <Headerimage 
+      <Navigationbar />
+      <Headerimage
         backgroundImageUrl="https://images.unsplash.com/photo-1638072536413-61c5c62b652e?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         text="Privacy Hub" />
       <div className="container mx-auto p-8 min-h-screen rounded-lg">
       <div className="flex space-x-4 mb-8">
         {flags.map(flag => (
-          <Image key={flag.country} src={flag.src} alt={flag.country} 
+          <Image key={flag.country} src={flag.src} alt={flag.country}
           width={40} height={40}
           className="w-10 h-6" />
         ))}
@@ -81,7 +85,7 @@ const PrivacyHub: React.FC = () => {
             {update.title}
             <span className="ml-2 text-white transform transition-transform duration-300 ease-in-out group-hover:rotate-45">→</span>
           </li>
-          
+
         ))}
       </ul>
       {updates.map(update => (
@@ -101,6 +105,7 @@ const PrivacyHub: React.FC = () => {
         </div>
       ))}
     </div>
+    <Footer />
     </div>
   );
 };

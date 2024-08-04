@@ -1,36 +1,89 @@
 "use client";
-import Menu from "@/components/Navigationbar/menu";
+import Navigationbar from "@/components/Navigationbar/Navigationbar";
 import Image from "next/image";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { Link as ScrollLink } from 'react-scroll';
+import InfiniteImageScroll from "@/components/ui/InfiniteImageScroll";
+import HeroSection from "@/components/Hero/HeroSection";
+import InfiniteTextScroll from "@/components/ui/InfiniteTextScroll";
+import WorksSlider from "@/components/ui/WorksSlider";
+import TeamSlider from "@/components/ui/TeamSlider";
+import Footer from "@/components/Footer/footer";
+import InfiniteToolsTextScroll from "@/components/ui/InfiniteToolsTextScroll";
 
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/916352191174', '_blank', 'noopener,noreferrer'); 
+    window.open('https://wa.me/916352191174', '_blank', 'noopener,noreferrer');
   };
+
+  useEffect(() => {
+    gsap.fromTo('.hero-title',
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.hero-title',
+          start: 'top 80%',
+          end: 'top 50%',
+          scrub: true
+        }
+      });
+
+    gsap.fromTo('.hero-description',
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.hero-description',
+          start: 'top 80%',
+          end: 'top 60%',
+          scrub: true
+        }
+      });
+
+    gsap.fromTo('.contact-button',
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.contact-button',
+          start: 'top 90%',
+          end: 'top 70%',
+          scrub: true
+        }
+      });
+  }, []);
+
+  
+
   return (
     <>
-    <Menu />
-   <main className="relative flex min-h-screen flex-col items-center justify-center p-6 sm:p-12 md:p-24">
-      <Image
-        src="/Images/BG/paris-bilal-YEtLnGgmgvk-.jpg" 
-        alt="Background Image"
-        layout="fill"
-        quality={100}
-        className="z-0 opacity-50" 
-      />
-      <h1 className="z-10 text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-ledcounter7 text-center">
-        spli<span className="text-purple-400">X</span>tech
-      </h1>
-      <p className="font-mono text-lg sm:text-xl md:text-2xl lg:text-3xl z-10 text-center mt-4 sm:mt-6 md:mt-8">
-        Akshar Patel presents  SpliXTech, transforming the digital landscape with cutting-edge web development, AI, ML, advanced software solutions, <span className="text-green-400">exceptional UI/UX design, and 3D product design,</span> in partnership with Redmagic Studio.
-      </p>
-      <button
-        className="z-10 mt-4 sm:mt-6 md:mt-8 px-4 sm:px-6 py-2 sm:py-3 bg-green-500 text-white rounded-lg text-base sm:text-lg md:text-xl font-bold hover:bg-green-600 transition duration-300"
-        onClick={handleWhatsAppClick}
-      >
-        Contact Us on WhatsApp
-      </button>
-    </main>
+
+      <main className="bg-black">
+
+      <Navigationbar />
+      <HeroSection />
+      <InfiniteTextScroll />
+      <WorksSlider />
+      <InfiniteImageScroll />
+      <InfiniteToolsTextScroll />
+      <TeamSlider />
+      <Footer />
+
+
+      </main>
+
     </>
   );
 }

@@ -13,8 +13,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily :{ 
-        array: ["array","sans-serif",], 
+      fontFamily :{
+        array: ["array","sans-serif",],
         inter: ["Inter","sans-serif"],
         mono: ["mono","sans-serif"],
         nodeCamera: ["nodeCamera","sans-serif"],
@@ -25,6 +25,9 @@ const config: Config = {
     },
     colors: {
       'blue-violet': '#8a2be2',
+      'royal-blue': '#4169e1',
+      'frosted-morning': '#e6e1d3',
+      'dark-blue': '#00008b',
     },
     clipPath: {
       'polygon-closed': 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',
