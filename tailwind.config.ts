@@ -28,6 +28,11 @@ const config: Config = {
       'royal-blue': '#4169e1',
       'frosted-morning': '#e6e1d3',
       'dark-blue': '#00008b',
+      'light-beige': '#F1F0EB',
+      'light-blue': '#ADD8E6',
+      'dark-blue-1': '#1e3a8a',
+      'charcoal': '#333333',
+
     },
     clipPath: {
       'polygon-closed': 'polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)',

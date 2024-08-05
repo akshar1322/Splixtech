@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[#F1F0EB] text-[#333333] p-10">
+    <div className="bg-light-beige text-charcoal p-10">
       <div className="footer-content flex flex-col md:flex-row justify-between items-start opacity-0">
         <div className="mb-8 text-black md:mb-0">
           <motion.h2
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
         {footerLinks.map((section) => (
           <div key={section.title} className="mb-6">
             <motion.h3
-              className="font-semibold text-sm text-[#333333] uppercase mb-3"
+              className="font-semibold text-sm text-charcoal uppercase mb-3"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                   whileHover={{ translateX: 10 }}
-                  className="mb-1 text-[#1e3a8a] cursor-pointer"
+                  className="mb-1 text-dark-blue-1 cursor-pointer"
                 >
                   <Link href={link.href}>{link.name}</Link>
                 </motion.li>
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         ))}
-        <div className="flex space-x-4 text-[#000000] mt-8 md:mt-0">
+        <div className="flex space-x-4 text-black mt-8 md:mt-0">
           {[
             { icon: <FaTwitter />, href: "https://x.com/Akshar_patel_13?t=TsN5oGBu9VDVy1J3tAASPQ&s=09" },
             // { icon: <FaFacebookF />, href: "https://facebook.com/yourprofile" },

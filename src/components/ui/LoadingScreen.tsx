@@ -29,6 +29,8 @@ const LoadingScreen: React.FC = () => {
       >
         <Image
         src="/Images/Art/colors-waiting-for-upload-or-download.gif" alt="Loading"
+        width={500}
+        height={500}
         className="w-64 h-64"
         />
       </motion.div>
