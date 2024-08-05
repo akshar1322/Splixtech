@@ -11,55 +11,58 @@ const InfiniteTextScroll = () => {
     const tl = useRef<gsap.core.Timeline | null>(null);
 
     useEffect(() => {
-      // Fetch content from data file
-      setContent(contentList);
+        // Fetch content from data file
+        setContent(contentList);
 
-      if (!sliderRef.current || !contentRef.current) return;
+        if (!sliderRef.current || !contentRef.current) return;
 
-      // Setup GSAP timeline
-      tl.current = gsap.timeline({
-        repeat: -1,
-        defaults: { ease: 'none', duration: 15 },
-      });
+        // Setup GSAP timeline
+        tl.current = gsap.timeline({
+            repeat: -1,
+            defaults: { ease: 'none', duration: 30 }, // Adjust duration as needed
+        });
 
-      tl.current.fromTo(contentRef.current, { x: '0%' }, { x: '-100%' });
+        tl.current.fromTo(contentRef.current, { x: '0%' }, { x: '-100%' });
 
-      // Slow scroll on hover
-      const handleMouseEnter = () => {
-        tl.current?.timeScale(0.5); // Slow down to half speed on hover
-      };
+        // Slow scroll on hover
+        const handleMouseEnter = () => {
+            tl.current?.timeScale(0.5); // Slow down to half speed on hover
+        };
 
-      const handleMouseLeave = () => {
-        tl.current?.timeScale(1); // Resume normal speed
-      };
+        const handleMouseLeave = () => {
+            tl.current?.timeScale(1); // Resume normal speed
+        };
 
-      sliderRef.current.addEventListener('mouseenter', handleMouseEnter);
-      sliderRef.current.addEventListener('mouseleave', handleMouseLeave);
+        const sliderElement = sliderRef.current;
+        sliderElement?.addEventListener('mouseenter', handleMouseEnter);
+        sliderElement?.addEventListener('mouseleave', handleMouseLeave);
 
-      // Cleanup event listeners on unmount
-      return () => {
-        sliderRef.current?.removeEventListener('mouseenter', handleMouseEnter);
-        sliderRef.current?.removeEventListener('mouseleave', handleMouseLeave);
-      };
+        // Cleanup event listeners on unmount
+        return () => {
+            sliderElement?.removeEventListener('mouseenter', handleMouseEnter);
+            sliderElement?.removeEventListener('mouseleave', handleMouseLeave);
+        };
     }, []);
 
     return (
-      <div className="w-full glass-background-blue py-10">
-        {/* <h2 className="text-3xl ml-5 font-bold font-neopixelregular text-start  mb-6">Trusted By</h2> */}
-        <div ref={sliderRef} className="relative w-full h-20 justify-center  overflow-hidden">
-          <div ref={contentRef} className="absolute w-full h-full flex">
-            {[...content, ...content].map((item, index) => (
-              <div key={index} className="flex-shrink-0 mx-20 flex items-center justify-center">
-                {item.type === 'text' && (
-                  <span className="text-xl font-semibold">
-                    {item.content}
-                  </span>
-                )}
-              </div>
-            ))}
-          </div>
+        <div className="w-full glass-background-blue py-10">
+            {/* <h2 className="text-3xl ml-5 font-bold font-neopixelregular text-start mb-6">Trusted By</h2> */}
+            <div ref={sliderRef} className="relative w-full h-20 overflow-hidden">
+                <div ref={contentRef} className="absolute flex w-full h-full">
+                    {[...content, ...content].map((item, index) => (
+                        <div key={index} className="flex-shrink-0 mx-10 md:mx-5 flex items-center justify-center mx-responsive">
+
+                            {item.type === 'text' && (
+                                <span className="text-xl font-semibold text-contrast text-shadow text-hover">
+                                {item.content}
+                              </span>
+
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
     );
 };
 

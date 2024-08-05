@@ -28,16 +28,15 @@ const TeamSlider = () => {
   };
 
   return (
-    <div className="font-neopixelregular bg-frosted-morning p-4">
+    <div className="font-neopixelregular bg-[#F1F0EB] p-4">
       <div className="p-5">
-        <h1 className="text-7xl text-black text-start">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl text-[#333333] text-start">
           Meet Our Team
         </h1>
       </div>
-      <br />
       <Swiper
-        slidesPerView={3.5}
-        spaceBetween={50}
+        slidesPerView={1}
+        spaceBetween={10}
         centeredSlides={false}
         pagination={{
           clickable: true,
@@ -47,62 +46,77 @@ const TeamSlider = () => {
           setSwiperInstance(swiper);
           swiperRef.current = swiper;
         }}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 3.5,
+            spaceBetween: 40,
+          }
+        }}
       >
         {teamData.map((member) => (
           <SwiperSlide key={member.id}>
             <motion.div
-              className="rounded-lg p-4"
+              className="relative rounded-lg p-4 bg-white shadow-md overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              style={{ backgroundColor: member.backgroundColor }}
             >
               <Image
                 src={member.imageUrl}
                 alt={member.name}
                 width={300}
                 height={200}
-                className="rounded-lg"
+                className="w-full h-auto object-cover"
               />
-              <h2 className="text-2xl text-black mt-4">{member.name}</h2>
-              <p className="text-lg text-gray-700">{member.role}</p>
+              <div className="absolute bottom-0 right-0 bg-black text-white px-4 py-2 text-sm rounded-tl-lg">
+                {member.role}
+              </div>
+              <h2 className="text-xl md:text-2xl text-[#333333] mt-4">{member.name}</h2>
               <div className="flex space-x-4 mt-4">
                 {member.socialLinks.instagram && (
                   <a href={member.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
-                    <FaInstagram className="text-2xl" />
+                    <FaInstagram className="text-xl md:text-2xl text-[#E4405F]" />
                   </a>
                 )}
                 {member.socialLinks.facebook && (
                   <a href={member.socialLinks.facebook} target="_blank" rel="noopener noreferrer">
-                    <FaFacebook className="text-2xl" />
+                    <FaFacebook className="text-xl md:text-2xl text-[#3b5998]" />
                   </a>
                 )}
                 {member.socialLinks.twitter && (
                   <a href={member.socialLinks.twitter} target="_blank" rel="noopener noreferrer">
-                    <FaTwitter className="text-2xl" />
+                    <FaTwitter className="text-xl md:text-2xl text-[#1DA1F2]" />
                   </a>
                 )}
                 {member.socialLinks.medium && (
                   <a href={member.socialLinks.medium} target="_blank" rel="noopener noreferrer">
-                    <FaMedium className="text-2xl" />
+                    <FaMedium className="text-xl md:text-2xl text-[#00AB6C]" />
                   </a>
                 )}
               </div>
             </motion.div>
-            <br /> <br />
+            <br /><br />
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="flex text-3xl justify-end space-x-6 mt-4">
+      <div className="flex text-xl md:text-2xl lg:text-3xl justify-end space-x-4 mt-4">
         <button
           onClick={handlePrevClick}
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-4 px-8 rounded-md"
+          className="bg-[#d1d5db] hover:bg-[#9ca3af] text-[#333333] font-bold py-2 px-4 md:py-3 md:px-6 rounded-md"
         >
           <FaArrowLeft />
         </button>
         <button
           onClick={handleNextClick}
-          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-4 px-8 rounded-md"
+          className="bg-[#d1d5db] hover:bg-[#9ca3af] text-[#333333] font-bold py-2 px-4 md:py-3 md:px-6 rounded-md"
         >
           <FaArrowRight />
         </button>

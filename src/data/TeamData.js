@@ -4,21 +4,21 @@ const teamData = [
     {
       id: 1,
       name: "Akshar Patel",
-      role: "Founder & Full Stack Developer",
-      imageUrl: "https://images.unsplash.com/photo-1721925376073-4d2c53dd12f2?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      role: "Founder",
+      imageUrl: "/Images/Art/3d-casual-life-young-man-at-workplace-with-coffee.png",
       backgroundColor: "#BA76FF", // primary color
       socialLinks: {
-        instagram: "https://instagram.com/aksharpatel",
+        instagram: "https://www.instagram.com/_akshar.x",
         facebook: "https://facebook.com/aksharpatel",
-        twitter: "https://twitter.com/aksharpatel",
+        twitter: "https://x.com/Akshar_patel_13?t=TsN5oGBu9VDVy1J3tAASPQ&s=09",
         medium: "https://medium.com/@aksharpatel"
       }
-    },
+    },//
     {
       id: 2,
-      name: "John Doe",
+      name: "Pruvi Thakor",
       role: "Full Stack Developer",
-      imageUrl: "https://images.unsplash.com/photo-1721925395637-cd3f2954df8d?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      imageUrl: "/Images/Art/business-3d-young-man-in-formalwear-sitting-on-the-floor-and-taking-photo.png",
       backgroundColor: "#66D9EF", // Soft blue
       socialLinks: {
         instagram: "https://instagram.com/johndoe",
@@ -29,9 +29,9 @@ const teamData = [
     },
     {
       id: 3,
-      name: "Jane Smith",
-      role: "UI Designer",
-      imageUrl: "https://images.unsplash.com/photo-1721925360331-852599c4327a?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      name: "Uma Chauhan",
+      role: "Godaddy Developer",
+      imageUrl: "/Images/Art/3d-casual-life-young-woman-at-work-with-laptop-writing.png",
       backgroundColor: "#8BC34A", // Mint green
       socialLinks: {
         instagram: "https://instagram.com/janesmith",
@@ -42,15 +42,15 @@ const teamData = [
     },
     {
       id: 4,
-      name: "Michael Johnson",
-      role: "Backend Developer",
-      imageUrl: "https://images.unsplash.com/photo-1707814143198-d9d68e808464?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      backgroundColor: "#C0C0C0", // Silver
+      name: "Dipsa khunt ",
+      role: "Graphic Designer",
+      imageUrl: "/Images/Art/casual-life-3d-woman-taking-funny-photo-with-dog.png",
+      backgroundColor: "#66D9EF", // Soft blue
       socialLinks: {
-        instagram: "https://instagram.com/michaeljohnson",
-        facebook: "https://facebook.com/michaeljohnson",
-        twitter: "https://twitter.com/michaeljohnson",
-        medium: "https://medium.com/@michaeljohnson"
+        instagram: "https://instagram.com/johndoe",
+        facebook: "https://facebook.com/johndoe",
+        twitter: "https://twitter.com/johndoe",
+        medium: "https://medium.com/@johndoe"
       }
     },
     // Add more team members as needed

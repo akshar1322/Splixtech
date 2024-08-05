@@ -1,8 +1,9 @@
 
 const content = [
-    { type: 'image', src: '/Images/Company/Rectangle 11.png', alt: 'Image 1' },
-    { type: 'image', src: '/Images/Company/Rectangle 12.png', alt: 'Image 2' },
-    { type: 'image', src: '/Images/Company/Rectangle 13.png', alt: 'Image 3' },
+    { type: 'image', src: '/Images/Company/icons8-fiverr-256.png', alt: 'Fiverr' },
+    { type: 'image', src: '/Images/Company/Rectangle 12.png', alt: 'Godaddy' },
+    { type: 'image', src: '/Images/Company/icons8-google-48.png', alt: 'Google' },
+    { type: 'image', src: '/Images/Company/Rectangle 13.png', alt: 'VIPBACHCHU' },
   ];
 
   export default content;
