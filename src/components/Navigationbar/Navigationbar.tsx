@@ -72,14 +72,15 @@ const Navigationbar = () => {
           <div className="flex-grow flex flex-col space-y-6 text-left">
             {Menulinks.map((Menulink, index) => (
               <div key={index} className="menu-link-item-holder relative">
-                <Link href={Menulink.link} className="text-gray-600 text-3xl md:text-5xl font-normal leading-none" onClick={handleMenuClick}>
+                <Link href={Menulink.link} className="text-white  text-3xl md:text-5xl font-normal leading-none" onClick={handleMenuClick}>
                   {Menulink.title}
                 </Link>
               </div>
             ))}
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 w-full mt-8">
-            <div className="flex flex-col text-lg md:text-2xl space-y-2 text-gray-600">
+            <div className="flex flex-col text-lg md:text-2xl space-y-2
+            tracking-wider text-white">
               <Link href="https://x.com/Akshar_patel_13?t=TsN5oGBu9VDVy1J3tAASPQ&s=09" className="group">
                 X <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
               </Link>
@@ -93,7 +94,7 @@ const Navigationbar = () => {
                 LinkedIn <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
               </Link>
             </div>
-            <div className="flex flex-col text-xl md:text-3xl space-y-2 text-gray-600">
+            <div className="flex flex-col text-xl font-neopixelregular tracking-wider md:text-3xl space-y-2 text-white">
               <Link href="https://wa.me/916352191174" className="group">
                 WhatsApp <span className="transform transition-transform duration-300 ease-in-out rotate-0 group-hover:rotate-45">&#8599;</span>
               </Link>

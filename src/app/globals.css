@@ -138,17 +138,13 @@ body {
   transition: opacity 0.3s ease;
 }
 
-.footer-temp {
-  background-color: red; /* To visually check if it's rendered */
-  color: white;
-  padding: 20px;
+.footer-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
-/* Add this to your global CSS or a specific style file */
-.footer-content-temp {
-  background-color: yellow; /* To ensure it's visible */
-  color: black;
-  padding: 20px;
-}
+
+
 
 
 @media (max-width: 768px) {

@@ -15,6 +15,7 @@ import Slide from '@/components/ui/Slide';
 import CookieCard from "@/components/CookieCard/CookieCard";
 import useInView from '@/hooks/useInView';
 import LoadingScreen from "@/components/ui/LoadingScreen";
+import Portfolio from "@/components/ui/Portfolio";
 
 
 
@@ -53,41 +54,43 @@ const Home = () => {
     }
   }, [teamInView, teamAnimated]);
 
-      const [loading, setLoading] = useState(true);
+      // const [loading, setLoading] = useState(true);
 
-      useEffect(() => {
-        const timer = setTimeout(() => {
-          setLoading(false);
-        }, 5000); // Match this duration with the animation duration
+      // useEffect(() => {
+      //   const timer = setTimeout(() => {
+      //     setLoading(false);
+      //   }, 5000); // Match this duration with the animation duration
 
-        return () => clearTimeout(timer);
-      }, []);
+      //   return () => clearTimeout(timer);
+      // }, []);
 
-      if (loading) {
-        return <LoadingScreen />;
-      }
+      // if (loading) {
+      //   return <LoadingScreen />;
+      // }
 
 
   return (
-    <main className="bg-black">
+    <main className="bg-transparent">
       <Navigationbar />
       <div ref={heroRef}>
-        <HeroSection />
+        {/* <HeroSection /> */}
       </div>
       <CookieCard />
       <div ref={worksRef} className="works-slider">
         <Slide
-          image1="/Images/BG/faded_gallery-7stSlxNAmfc-unsplash.jpg"
+          image1="/Images/BG/hero_img.jpg"
           image2="/Images/Art/3d-business-man-and-woman-working-with-laptop-1.png"
+
         />
         <InfiniteTextScroll />
         <WorksSlider />
       </div>
       <div ref={teamRef} className="team-slider">
+      <InfiniteImageScroll />
         <TeamSlider />
       </div>
-      <InfiniteImageScroll />
       <InfiniteToolsTextScroll />
+      <Portfolio />
       <Footer />
     </main>
   );

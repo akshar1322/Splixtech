@@ -45,7 +45,7 @@ const InfiniteTextScroll = () => {
     }, []);
 
     return (
-        <div className="w-full glass-background-blue py-10">
+        <div className="w-full font-telegraphic  tracking-wider glass-background-blue py-10">
             {/* <h2 className="text-3xl ml-5 font-bold font-neopixelregular text-start mb-6">Trusted By</h2> */}
             <div ref={sliderRef} className="relative w-full h-20 overflow-hidden">
                 <div ref={contentRef} className="absolute flex w-full h-full">
@@ -53,7 +53,7 @@ const InfiniteTextScroll = () => {
                         <div key={index} className="flex-shrink-0 mx-10 md:mx-5 flex items-center justify-center mx-responsive">
 
                             {item.type === 'text' && (
-                                <span className="text-xl font-semibold text-contrast text-shadow text-hover">
+                                <span className="text-2xl text-contrast text-shadow text-hover">
                                 {item.content}
                               </span>
 
