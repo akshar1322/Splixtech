@@ -70,7 +70,7 @@ const Home = () => {
 
 
   return (
-    <main className="bg-transparent">
+    <main className="bg-transparent overflow-y-auto  scrollbar-hide">
       <Navigationbar />
       <div ref={heroRef}>
         {/* <HeroSection /> */}
