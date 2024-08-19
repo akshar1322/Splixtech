@@ -2,6 +2,9 @@
 import { useEffect, useRef } from 'react';
 import { FaTwitter, FaInstagram, FaLinkedinIn, FaCookieBite } from 'react-icons/fa';
 import Link from 'next/link';
+import gsap from 'gsap';
+
+
 
 const Footer: React.FC = () => {
   const footerContentRef = useRef<HTMLDivElement>(null);
@@ -14,6 +17,29 @@ const Footer: React.FC = () => {
       footerContent.style.transform = 'translateY(0)';
     } else {
       console.error("Footer content ref is not defined.");
+    }
+  }, []);
+
+  const scaleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (scaleRef.current) {
+      gsap.to(scaleRef.current, {
+        scale: 1.1,
+        duration: 0.3,
+        ease: "power1.inOut",
+        paused: true,
+        repeat: -1,
+        yoyo: true,
+      });
+
+      scaleRef.current.addEventListener("mouseenter", () => {
+        gsap.to(scaleRef.current, { scale: 1.1, duration: 0.3 });
+      });
+
+      scaleRef.current.addEventListener("mouseleave", () => {
+        gsap.to(scaleRef.current, { scale: 1, duration: 0.3 });
+      });
     }
   }, []);
 
@@ -40,7 +66,9 @@ const Footer: React.FC = () => {
       links: [
         { name: 'Update Hub', href: '/update-hub' },
         { name: 'Privacy Hub', href: '/privacy-hub' },
-        { name: 'Cookie', href: '/cookie' }
+        { name: 'Cookie', href: '/cookie-hub' },
+        { name: 'Services', href: '/services' },
+        { name: 'Pricing', href: '/pricing' }
       ]
     }
   ];
@@ -51,11 +79,16 @@ const Footer: React.FC = () => {
         ref={footerContentRef}
         className="footer-content flex flex-col md:flex-row justify-between items-start opacity-0 transform translate-y-10  duration-1000 "
       >
-        <div className="mb-8 text-black md:mb-0">
-          <h2 className="font-bold font-neopixelregular text-5xl mb-4">
+          <div className="mb-8 text-black md:mb-0" ref={scaleRef}>
+        <h2 className="font-bold font-neopixelregular text-5xl mb-4">
+          <Link
+            href="/"
+            className="cursor-pointer hover:translate-x-2 transition-transform duration-300"
+          >
             SpliXTech
-          </h2>
-        </div>
+          </Link>
+        </h2>
+      </div>
         {footerLinks.map((section) => (
           <div key={section.title} className="mb-6">
             <h3 className="font-semibold text-sm text-charcoal uppercase mb-3">
@@ -75,7 +108,7 @@ const Footer: React.FC = () => {
             { icon: <FaTwitter />, href: "https://x.com/Akshar_patel_13?t=TsN5oGBu9VDVy1J3tAASPQ&s=09" },
             { icon: <FaInstagram />, href: "https://www.instagram.com/_akshar.x?igsh=emp1cWo4aW5zZTZo" },
             { icon: <FaLinkedinIn />, href: "https://www.linkedin.com/in/akshar-patel-4a78b0217?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-            { icon: <FaCookieBite />, href: "/cookie" }
+            { icon: <FaCookieBite />, href: "/cookie-hub" }
           ].map(({ icon, href }, index) => (
             <div
               key={index}

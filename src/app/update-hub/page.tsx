@@ -18,16 +18,27 @@ interface Update {
 const updates: Update[] = [
   {
     id: 1,
+    name: 'Stable - 1.0.A',
+    version: 'Stable',
+    dateTime: 'Monday, 19 August 24 04:10 pm',
+    title: 'Stable release of version 1.0.A',
+    what: 'This release marks the stable version after the beta testing phase. All reported bugs have been fixed.',
+    why: 'To provide a more reliable and polished experience based on the beta feedback.',
+    performance: 'Significant performance improvements, including faster load times and reduced memory usage.',
+  },
+  {
+    id: 2,
     name: 'Beta - 1.0.A',
     version: 'Beta',
-    dateTime: 'Friday, 2 Agust 24 04:10 am',
-    title: 'Wllcome to the first beta release of the app',
-    what: '',
-    why: '',
-    performance: '',
+    dateTime: 'Friday, 2 August 24 04:10 am',
+    title: 'Welcome to the first beta release of the app',
+    what: 'This release includes initial features for testing. It is the first public version for feedback.',
+    why: 'We aim to gather user feedback to improve the stability and performance of the app.',
+    performance: 'Some minor performance improvements have been made, but further optimization is planned for future updates.',
   },
 
-     // Add more updates as needed
+
+  // Add more updates as needed
 ];
 
 const UpdateHub: React.FC = () => {

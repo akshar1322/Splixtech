@@ -16,6 +16,10 @@ import CookieCard from "@/components/CookieCard/CookieCard";
 import useInView from '@/hooks/useInView';
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import Portfolio from "@/components/ui/Portfolio";
+// import PricingCard from "@/components/ui/PricingCard";
+import { pricingData } from "@/data/pricingData";
+import FAQSection from "@/components/ui/FAQSection";
+// import PricingSection from "@/components/ui/price";
 
 
 
@@ -91,6 +95,8 @@ const Home = () => {
       </div>
       <InfiniteToolsTextScroll />
       <Portfolio />
+      {/* <PricingSection /> */}
+      <FAQSection />
       <Footer />
     </main>
   );

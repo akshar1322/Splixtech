@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import 'swiper/swiper.min.css';
@@ -61,3 +62,4 @@ const ImageSlider: React.FC<SliderProps> = ({ images }) => {
 };
 
 export default ImageSlider;
+// import { pricingData } from '@/data/pricingData';
