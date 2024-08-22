@@ -74,7 +74,7 @@ const Home = () => {
 
 
   return (
-    <main className="bg-transparent overflow-y-auto  scrollbar-hide">
+    <main className=" overflow-y-auto  scrollbar-hide">
       <Navigationbar />
       <div ref={heroRef}>
         {/* <HeroSection /> */}
@@ -96,6 +96,7 @@ const Home = () => {
       <InfiniteToolsTextScroll />
       <Portfolio />
       {/* <PricingSection /> */}
+      <br />
       <FAQSection />
       <Footer />
     </main>

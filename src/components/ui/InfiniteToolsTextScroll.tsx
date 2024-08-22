@@ -45,7 +45,7 @@ const InfiniteToolsTextScroll = () => {
     }, []);
 
     return (
-        <div className="w-full font-neopixelregular glass-background-blue py-10">
+        <div className="w-full bg-black font-neopixelregular  py-10">
             <h2 className="text-4xl mr-5 font-bold text-end mb-6 text-contrast">
                 Tools
             </h2>

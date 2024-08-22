@@ -45,7 +45,7 @@ const InfiniteTextScroll = () => {
     }, []);
 
     return (
-        <div className="w-full font-telegraphic  tracking-wider glass-background-blue py-10">
+        <div className="w-full font-telegraphic  tracking-wider bg-black py-10">
             {/* <h2 className="text-3xl ml-5 font-bold font-neopixelregular text-start mb-6">Trusted By</h2> */}
             <div ref={sliderRef} className="relative w-full h-20 overflow-hidden">
                 <div ref={contentRef} className="absolute flex w-full h-full">

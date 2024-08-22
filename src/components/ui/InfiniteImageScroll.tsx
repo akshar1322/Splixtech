@@ -18,7 +18,7 @@ const InfiniteImageScroll = () => {
 
         // Setup GSAP timeline
         tl.current = gsap.timeline({
-            repeat: -1,
+            repeat: -10,
             defaults: { ease: 'none', duration: 30 },
         });
 

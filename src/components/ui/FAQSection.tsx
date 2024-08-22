@@ -29,7 +29,7 @@ const FAQSection: FC = () => {
   };
 
   return (
-    <div className="bg-[#F1F0EB] font-neopixelregular text-black p-8 overflow-hidden  shadow-lg max-w-fitxl mx-auto ">
+    <div className="bg-[#F1F0EB] rounded-t-2xl font-neopixelregular text-black p-8 overflow-hidden  shadow-lg max-w-fitxl mx-auto ">
       <h2 className="text-5xl font-semibold mb-4">Frequently Asked Questions</h2>
       <div className="space-y-6">
         {faqData.map((item, index) => (
