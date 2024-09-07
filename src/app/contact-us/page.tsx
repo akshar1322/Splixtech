@@ -46,7 +46,8 @@ const Contact: React.FC = () => {
 
   return (
     <main>
-      <Navigationbar />
+            <Navigationbar />
+        <br />
       <div className="relative h-screen overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"

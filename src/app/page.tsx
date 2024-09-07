@@ -19,6 +19,7 @@ import Portfolio from "@/components/ui/Portfolio";
 // import PricingCard from "@/components/ui/PricingCard";
 import { pricingData } from "@/data/pricingData";
 import FAQSection from "@/components/ui/FAQSection";
+import AnimatedSVG from "@/components/ui/AnimatedSVG";
 // import PricingSection from "@/components/ui/price";
 
 
@@ -75,7 +76,8 @@ const Home = () => {
 
   return (
     <main className=" overflow-y-auto  scrollbar-hide">
-      <Navigationbar />
+            <Navigationbar />
+        <br />
       <div ref={heroRef}>
         {/* <HeroSection /> */}
       </div>
@@ -97,6 +99,7 @@ const Home = () => {
       <Portfolio />
       {/* <PricingSection /> */}
       <br />
+      <AnimatedSVG />
       <FAQSection />
       <Footer />
     </main>

@@ -5,6 +5,7 @@ import Contact from '../contact-us/page';
 import Headerimage from '@/components/ui/Headerimage';
 import Navigationbar from '@/components/Navigationbar/Navigationbar';
 import Footer from '@/components/Footer/footer';
+import AnimatedSVG from '@/components/ui/AnimatedSVG';
 
 
 
@@ -35,9 +36,8 @@ const AboutUs: React.FC = () => {
     // main container
     <main >
       {/* header */}
-        <Navigationbar />
-        <br /> <br /><br /> <br />
-
+              <Navigationbar />
+        <br />
           <Headerimage
           backgroundImageUrl="https://images.unsplash.com/photo-1700508671735-d724d59ea4b5?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           text="About Us" />
@@ -62,8 +62,11 @@ const AboutUs: React.FC = () => {
 
 
                 </div>
-              </div>
 
+              </div>
+              <div className='yellowDot-cursor' >
+              <AnimatedSVG />
+              </div>
                 <div className="my-8">
                   <h2 className="text-3xl font-bold text-center">
                   SPLIXTECH, transforming the digital landscape with cutting-edge web development, AI, ML, advanced software solutions, exceptional UI/UX design, and 3D product design, in partnership with Redmagic Studio.

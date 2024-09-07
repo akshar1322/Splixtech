@@ -57,7 +57,8 @@ const ServicesPage: FC = () => {
 
   return (
     <>
-      <Navigationbar />
+            <Navigationbar />
+        <br />
         <main className='mt-24'>
             <Headerimage
             backgroundImageUrl='https://images.unsplash.com/photo-1589154831836-71fa41c229ce?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -82,7 +83,7 @@ const ServicesPage: FC = () => {
                      width={64}
                      height={64}
                      className="mx-auto mb-4"
-                     
+
                      />
 
                     <h2 className="text-2xl font-semibold mb-2">{service.title}</h2>

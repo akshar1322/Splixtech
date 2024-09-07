@@ -16,21 +16,33 @@ interface Update {
 }
 
 const updates: Update[] = [
+
+    {
+      id: 1,
+      name: 'Stable - 1.01.0.A',
+      version: '1.01.0.A',
+      dateTime: 'Sunday, September 8, 2024 01:00 am',
+      title: 'Stable Release 1.01.0.A for Developers',
+      what: 'This stable release comes after rigorous beta testing, with all identified bugs resolved.',
+      why: 'To ensure stability and optimize the developer experience based on feedback from the beta phase.',
+      performance: 'This update provides a more stable and efficient environment for developers working with the platform.',
+    },
+
   {
-    id: 1,
+    id: 2,
     name: 'Stable - 1.0.A',
     version: 'Stable',
-    dateTime: 'Monday, 19 August 24 04:10 pm',
+    dateTime: 'Monday, September 8, 2024 04:10 pm',
     title: 'Stable release of version 1.0.A',
     what: 'This release marks the stable version after the beta testing phase. All reported bugs have been fixed.',
     why: 'To provide a more reliable and polished experience based on the beta feedback.',
     performance: 'Significant performance improvements, including faster load times and reduced memory usage.',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Beta - 1.0.A',
     version: 'Beta',
-    dateTime: 'Friday, 2 August 24 04:10 am',
+    dateTime: 'Friday, September 8, 2024 04:10 am',
     title: 'Welcome to the first beta release of the app',
     what: 'This release includes initial features for testing. It is the first public version for feedback.',
     why: 'We aim to gather user feedback to improve the stability and performance of the app.',
@@ -53,8 +65,9 @@ const UpdateHub: React.FC = () => {
   return (
 
     <div className="bg-black text-white">
-      <Navigationbar />
-      <br />
+        <Navigationbar />
+        <br />
+
       <Headerimage
         backgroundImageUrl="https://images.unsplash.com/photo-1627637819794-fba32f82be16?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         text="Release Updates" />
@@ -67,8 +80,8 @@ const UpdateHub: React.FC = () => {
               <p className="text-2xl font-bold mb-2">{update.name}</p>
               <p className="text-sm mb-2">{update.dateTime}</p>
               <p className="text-xl font-semibold mb-2">{update.title}</p>
-              <p className="text-sm mb-2">{update.what}</p>
-              <p className="text-sm mb-2">{update.why}</p>
+              <p className="text-sm mb-2">What: {update.what}</p>
+              <p className="text-sm mb-2">Why: {update.why}</p>
               <p className="text-sm mb-2">Performance: {update.performance}</p>
             </div>
           </div>
