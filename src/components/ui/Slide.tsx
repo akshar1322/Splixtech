@@ -70,7 +70,7 @@ const Slide: React.FC<SlideProps> = ({ image1, image2 }) => {
         className="absolute text-black top-16 inset-0"
         ref={image2Ref}
       >
-        <div className='text-black font-bold font-neopixelregular text-start text-5xl mt-16 mr-6 '>
+        <div className='text-black  font-kontanter text-start text-4xl mt-16 mr-6 '>
         <h1 className='mr-6 ml-4' >
           Transforming your ideas into reality
         </h1>
@@ -80,14 +80,14 @@ const Slide: React.FC<SlideProps> = ({ image1, image2 }) => {
         </div>
 
         <p
-          className="text-black font-neopixelregular  text-2xl mt-3 mr-16 ml-4">
+          className="text-black font-kontanter  text-xl mt-3 mr-16 ml-4">
           Unlock Free Hosting and Domain with <span className='text-3xl  font-light text-purple-500' >Every Project!</span>
         </p>
 
         <div className="button-wrapper">
           <button
           onClick={handleWhatsAppClick}
-            className="relative text-lg md:text-xl lg:text-2xl flex items-center px-7  py-3 md:px-16 md:py-4 overflow-hidden font-medium font-neopixelregular transition-all bg-indigo-500 rounded-md group ml-10 mt-8"
+            className="relative text-lg md:text-xl lg:text-2xl flex items-center px-7  py-3 md:px-16 md:py-4 overflow-hidden font-light font-kontanter  transition-all bg-indigo-500 rounded-md group ml-10 mt-8"
           >
             <span
               className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4"

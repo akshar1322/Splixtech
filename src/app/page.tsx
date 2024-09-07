@@ -4,10 +4,10 @@ import { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Navigationbar from "@/components/Navigationbar/Navigationbar";
+import WorksSlider from "@/components/ui/WorksSlider";
 import InfiniteImageScroll from "@/components/ui/InfiniteImageScroll";
 import HeroSection from "@/components/Hero/HeroSection";
 import InfiniteTextScroll from "@/components/ui/InfiniteTextScroll";
-import WorksSlider from "@/components/ui/WorksSlider";
 import TeamSlider from "@/components/ui/TeamSlider";
 import Footer from "@/components/Footer/footer";
 import InfiniteToolsTextScroll from "@/components/ui/InfiniteToolsTextScroll";
@@ -82,7 +82,7 @@ const Home = () => {
       <CookieCard />
       <div ref={worksRef} className="works-slider">
         <Slide
-          image1="/Images/BG/hero_img.jpg"
+          image1="/Images/BG/milad-fakurian-o59EEbR1n_w-.jpg"
           image2="/Images/Art/3d-business-man-and-woman-working-with-laptop-1.png"
 
         />

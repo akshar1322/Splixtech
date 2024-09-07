@@ -52,11 +52,11 @@ const Navigationbar = () => {
   }, [isMenuOpen]);
 
   return (
-    <div className="relative" ref={container}>
-      <div className="fixed glass-background rounded-full font-telegraphic top-2 left-0 w-full p-4 flex justify-between items-center z-10">
-        <div className="text-black font-telegraphic">
+    <div className="relative  " ref={container}>
+      <div className="fixed glass-background rounded-full font-telegraphic top-2 left-0 w-full p-4 flex justify-between items-center z-10  ">
+        <div className="text-black font-array">
           <Link className="text-5xl" href="/">Spli
-            <span className="text-royal-blue">X</span>Tech
+            <span className="text-royal-blue  ">X</span>Tech
           </Link>
         </div>
         <div className="cursor-pointer text-gray-600" onClick={handleMenuClick}>

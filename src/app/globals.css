@@ -91,6 +91,14 @@ body {
       format('woff'); /* Font source and format */
   }
 }
+@layer base {
+  @font-face {
+    font-family: kontanter; /* Name of your custom font */
+    font-weight: 400; /* Font weight (normal) */
+    src: url(../../public/fonts/Kontanter/Kontanter-Bold.otf)
+      format('woff'); /* Font source and format */
+  }
+}
 
 
 .menu-overlay {
@@ -192,5 +200,10 @@ body {
 .footer-container.visible {
   transform: translateY(0);
   opacity: 1;
+}
+
+.blende{
+  mix-blend-mode:difference;
+  color: #ffffff;
 }
 

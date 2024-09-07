@@ -76,7 +76,7 @@ const TeamSlider = () => {
                 height={200}
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute bottom-0 right-0 bg-black text-white px-4 py-2 text-sm rounded-tl-lg">
+              <div className="absolute  right-0 bg-black text-white px-4 py-2 bottom-0 text-sm rounded-tl-lg">
                 {member.role}
               </div>
               <h2 className="text-xl md:text-2xl text-[#333333] mt-4">{member.name}</h2>

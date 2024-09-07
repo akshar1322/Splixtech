@@ -21,6 +21,7 @@ const config: Config = {
         telegraphic: ["telegraphic","sans-serif"],
         ledcounter7: ["ledcounter7","sans-serif"],
         neopixelregular: ["neopixelregular","sans-serif"],
+        kontanter: ["kontanter","sans-serif"],
 
     },
     colors: {
