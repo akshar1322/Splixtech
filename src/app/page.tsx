@@ -77,7 +77,6 @@ const Home = () => {
   return (
     <main className=" overflow-y-auto  scrollbar-hide">
             <Navigationbar />
-        <br />
       <div ref={heroRef}>
         {/* <HeroSection /> */}
       </div>

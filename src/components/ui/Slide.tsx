@@ -83,13 +83,13 @@ const Slide: React.FC<SlideProps> = ({ image1, image2 }) => {
           alt="Image 1"
           layout="fill"
           objectFit="cover"
-          className="rounded-e-md"
+          className="rounded-e-xl"
         />
       </motion.div>
 
       {/* Gray Box sliding from right to left */}
       <motion.div
-        className="absolute rounded-s-md inset-0"
+        className="absolute rounded-s-xl inset-0"
         ref={grayBoxRef}
         style={{ backgroundColor: '#D3D3D3', opacity: 40 }}
       />
@@ -108,7 +108,27 @@ const Slide: React.FC<SlideProps> = ({ image1, image2 }) => {
             Every Project!
           </span>
         </p>
+        {/* <motion.div className="button-wrapper yellowDot-cursor">
+          <div id="string" ref={stringRef}>
+          <svg width="1000" height="200" xmlns="http://www.w3.org/2000/svg">
 
+     <defs>
+          <linearGradient id="color-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
+            <stop offset="0%" stopColor="red" />
+            <stop offset="50%" stopColor="blue" />
+            <stop offset="100%" stopColor="pink" />
+          </linearGradient>
+        </defs>
+        <path
+          ref={svgPathRef}
+          d="M 10 100 Q 500 100 990 100"
+          stroke="url(#color-gradient)"
+          strokeWidth="1.5"
+          fill="transparent"
+        />
+      </svg>
+          </div>
+        </motion.div> */}
         <div className="button-wrapper">
           <button
             onClick={handleWhatsAppClick}
@@ -127,18 +147,7 @@ const Slide: React.FC<SlideProps> = ({ image1, image2 }) => {
           </button>
         </div>
 
-        <motion.div className="button-wrapper yellowDot-cursor">
-          <div id="string" ref={stringRef}>
-            <svg width="1000" height="200">
-              <path
-                ref={svgPathRef}
-                d="M 10 100 Q 500 100 990 100"
-                stroke="white"
-                fill="transparent"
-              />
-            </svg>
-          </div>
-        </motion.div>
+
       </motion.div>
 
     </div>

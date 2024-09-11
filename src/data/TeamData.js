@@ -27,8 +27,20 @@ const teamData = [
         medium: "https://medium.com/@johndoe"
       }
     },
+    {
+      id: 3,
+      name: "Dipsa ",
+      role: "Graphics Designer",
+      imageUrl: "/Images/Art/casual-life-3d-woman-taking-funny-photo-with-dog.png",
+      backgroundColor: "#66D9EF", // Soft blue
+      socialLinks: {
+        instagram: "https://instagram.com/johndoe",
+        facebook: "https://facebook.com/johndoe",
+        twitter: "https://twitter.com/johndoe",
+        medium: "https://medium.com/@johndoe"
+      }
+    },
 
-    
     // Add more team members as needed
   ];
 
