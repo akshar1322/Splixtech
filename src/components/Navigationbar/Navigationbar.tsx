@@ -54,9 +54,9 @@ const Navigationbar = () => {
   return (
     <div className="relative  " ref={container}>
       <div className="fixed glass-background rounded-full font-telegraphic top-2 left-0 w-full p-4 flex justify-between items-center z-10  ">
-        <div className="text-black font-array">
+        <div className="text-gray-200 font-array">
           <Link className="text-5xl" href="/">Spli
-            <span className="text-royal-blue  ">X</span>Tech
+            <span className="text-lime-100  ">X</span>Tech
           </Link>
         </div>
         <div className="cursor-pointer text-gray-600" onClick={handleMenuClick}>

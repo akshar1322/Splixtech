@@ -11,7 +11,7 @@ import InfiniteTextScroll from "@/components/ui/InfiniteTextScroll";
 import TeamSlider from "@/components/ui/TeamSlider";
 import Footer from "@/components/Footer/footer";
 import InfiniteToolsTextScroll from "@/components/ui/InfiniteToolsTextScroll";
-import Slide from '@/components/ui/Slide';
+
 import CookieCard from "@/components/CookieCard/CookieCard";
 import useInView from '@/hooks/useInView';
 import LoadingScreen from "@/components/ui/LoadingScreen";
@@ -20,6 +20,7 @@ import Portfolio from "@/components/ui/Portfolio";
 import { pricingData } from "@/data/pricingData";
 import FAQSection from "@/components/ui/FAQSection";
 import AnimatedSVG from "@/components/ui/AnimatedSVG";
+import Slider from "@/components/ui/Slider";
 // import PricingSection from "@/components/ui/price";
 
 
@@ -82,11 +83,7 @@ const Home = () => {
       </div>
       <CookieCard />
       <div ref={worksRef} className="works-slider">
-        <Slide
-          image1="/Images/BG/milad-fakurian-o59EEbR1n_w-.jpg"
-          image2="/Images/Art/3d-business-man-and-woman-working-with-laptop-1.png"
-
-        />
+      <Slider />
         <InfiniteTextScroll />
         <WorksSlider />
       </div>

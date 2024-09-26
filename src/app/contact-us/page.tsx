@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import Navigationbar from '@/components/Navigationbar/Navigationbar';
 import Footer from '@/components/Footer/footer';
@@ -13,6 +14,7 @@ const Contact: React.FC = () => {
   });
 
   const [status, setStatus] = useState<string | null>(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -24,18 +26,31 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const payload = {
+      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,  // Fetch from .env file
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      consent: formData.consent ? 'Yes' : 'No',
+    };
+
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
+
       const result = await response.json();
+
       if (response.ok) {
         setStatus('Message sent successfully');
         setFormData({ name: '', phone: '', email: '', consent: false });
+        setShowPopup(true);
+        setTimeout(() => setShowPopup(false), 5000);
       } else {
         setStatus(result.message || 'Failed to send message');
       }
@@ -44,10 +59,15 @@ const Contact: React.FC = () => {
     }
   };
 
+  // WhatsApp contact handler
+  const handleWhatsApp = () => {
+    const whatsappUrl = `https://wa.me/?text=Hello%20SpliXtech,%20I%20would%20like%20to%20contact%20you.%20My%20details:%0AName:%20${formData.name}%0APhone:%20${formData.phone}%0AEmail:%20${formData.email}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <main>
-            <Navigationbar />
-        <br />
+      <Navigationbar />
       <div className="relative h-screen overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -103,14 +123,55 @@ const Contact: React.FC = () => {
                   I&apos;d like to receive notifications and offers from SpliXtech and consent to the privacy policy.
                 </span>
               </div>
-              <div className="flex justify-center">
-                <Button label="Send" />
+
+              <div className="flex justify-center space-x-4">
+                {/* <button
+                  type="button"
+                  onClick={handleWhatsApp}
+                  className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 focus:outline-none"
+                >
+                  Contact via WhatsApp
+                </button> */}
+                <button
+                  type="submit"
+                  className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none"
+                >
+                  Contact Us
+                </button>
               </div>
+
               {status && <p className="text-center text-lg mt-4">{status}</p>}
             </form>
           </div>
         </div>
       </div>
+
+      {/* Popup Modal for Success Message */}
+      {showPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            className="bg-white p-6 rounded-lg shadow-lg"
+          >
+            <motion.div
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.9 }}
+              className="w-16 h-16 mx-auto mb-4"
+            >
+              {/* Checkmark SVG for Tik Animation */}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green" className="w-16 h-16">
+                <path fillRule="evenodd" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM9.293 16.293l-3.293-3.293 1.414-1.414L9.293 13.293l5.293-5.293 1.414 1.414-6.707 6.707z" />
+              </svg>
+            </motion.div>
+            <h3 className="text-lg text-black font-semibold text-center">Message Sent Successfully!</h3>
+            <p className="text-center text-black mt-2">The SpliXtech team will contact you as soon as possible. Thank you!</p>
+          </motion.div>
+        </div>
+      )}
+
       <Footer />
     </main>
   );

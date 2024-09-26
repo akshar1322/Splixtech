@@ -211,4 +211,9 @@ body {
   mix-blend-mode:difference;
   color: #ffffff;
 }
+.slide {
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
 
