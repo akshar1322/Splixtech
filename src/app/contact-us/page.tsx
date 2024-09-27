@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import Button from '@/components/ui/Button';
 import Navigationbar from '@/components/Navigationbar/Navigationbar';
 import Footer from '@/components/Footer/footer';
 
@@ -28,7 +27,7 @@ const Contact: React.FC = () => {
     e.preventDefault();
 
     const payload = {
-      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,  // Fetch from .env file
+      access_key: 'b7bb07a7-b027-47c3-8bea-be0f419ba1fd',
       name: formData.name,
       phone: formData.phone,
       email: formData.email,
@@ -57,12 +56,6 @@ const Contact: React.FC = () => {
     } catch (error) {
       setStatus('An unexpected error occurred');
     }
-  };
-
-  // WhatsApp contact handler
-  const handleWhatsApp = () => {
-    const whatsappUrl = `https://wa.me/?text=Hello%20SpliXtech,%20I%20would%20like%20to%20contact%20you.%20My%20details:%0AName:%20${formData.name}%0APhone:%20${formData.phone}%0AEmail:%20${formData.email}`;
-    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -125,13 +118,6 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="flex justify-center space-x-4">
-                {/* <button
-                  type="button"
-                  onClick={handleWhatsApp}
-                  className="px-6 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 focus:outline-none"
-                >
-                  Contact via WhatsApp
-                </button> */}
                 <button
                   type="submit"
                   className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:outline-none"
@@ -146,7 +132,6 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Popup Modal for Success Message */}
       {showPopup && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
           <motion.div
@@ -161,7 +146,6 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.9 }}
               className="w-16 h-16 mx-auto mb-4"
             >
-              {/* Checkmark SVG for Tik Animation */}
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="green" className="w-16 h-16">
                 <path fillRule="evenodd" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM9.293 16.293l-3.293-3.293 1.414-1.414L9.293 13.293l5.293-5.293 1.414 1.414-6.707 6.707z" />
               </svg>
